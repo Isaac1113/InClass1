@@ -18,6 +18,8 @@
             Take input. If input is not negative and less than integer MAX_VALUE set as new max
         Else
             Display not valid selection
+        Display prompt for the menu
+        Take input from user
     Display Thank you message and end program
 */
 
@@ -28,11 +30,17 @@
 int main() {
 
     int max = 0;
+    char selection = "";
 
     printf("Press 1 to play a game\n");
     printf("Press 2 to change the max number\n");
     printf("Press 3 to quit");
 
-    
+    selection = getchar();
+    while (selection != '3') {
+        if (selection == '1') {
+            
+        }
+    }
 
 }
