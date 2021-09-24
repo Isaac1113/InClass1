@@ -23,4 +23,6 @@ int main(int argc, char *argv[]) {
     srand((unsigned) time(&t));
 
     double cost = arr[rand() % 4];
+
+    printf("Meal cost: %f\n", cost);
 }
