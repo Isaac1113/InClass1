@@ -59,7 +59,11 @@ int main() {
         }
         else if (selection == '2') {
             printf("Enter a new max value: ");
-            scanf("%d", &max);
+            long int newMax;
+            scanf("%ld", &newMax);
+
+            if (newMax > 0 && newMax < INT_MAX)
+                max = newMax;
         }
     }
 
