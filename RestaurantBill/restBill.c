@@ -17,5 +17,7 @@
 #include <time.h>
 
 int main(int argc, char *argv[]) {
+    time_t t;
+    double arr[] = {9.95, 4.55, 13.25, 22.35};
     
 }
