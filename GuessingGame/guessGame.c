@@ -60,6 +60,8 @@ int main() {
 
                 if (atoi(guess) == num)
                     printf("You guessed correct. You win!\n\n");
+                else if (guess[0] == 'q')
+                    printf("\n");    
                 else if (atoi(guess) > num)
                     printf("Your guess was too high.\n");
                 else
