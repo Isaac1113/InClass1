@@ -57,6 +57,10 @@ int main() {
                     printf("Your guess was too low.\n");
             } while ((guess != 'q') || (atoi(guess) != num));
         }
+        else if (selection == '2') {
+            printf("Enter a new max value: ");
+            scanf("%d", &max);
+        }
     }
 
 }
