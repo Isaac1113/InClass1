@@ -21,4 +21,6 @@ int main(int argc, char *argv[]) {
     double arr[] = {9.95, 4.55, 13.25, 22.35};
 
     srand((unsigned) time(&t));
+
+    double cost = arr[rand() % 4];
 }
