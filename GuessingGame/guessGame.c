@@ -29,8 +29,16 @@
 
 int main() {
 
+    FILE *fp;
     int max = 10;
     char selection;
+
+    if (fp = fopen("userValues.txt", "r")) {
+        char prevMax[50];
+        fscanf(fp, "%s", prevMax);
+        max = atoi(prevMax);
+        fclose(fp);
+    }
 
     printf("Press 1 to play a game\n");
     printf("Press 2 to change the max number\n");
@@ -43,7 +51,7 @@ int main() {
             time_t t;
             srand((unsigned) time(&t));
             int num = (rand() % max) + 1;
-            char guess[10];
+            char guess[50];
             
             do
             {
@@ -63,8 +71,14 @@ int main() {
             long int newMax;
             scanf("%ld", &newMax);
 
-            if (newMax > 0 && newMax < INT_MAX)
+            if (newMax > 0 && newMax < INT_MAX) {
                 max = newMax;
+                char text[50];
+                fp = fopen("userValues.txt", "w+");
+                sprintf(text, "%ld", newMax);
+                fputs(text, fp);
+                fclose(fp);
+            }
             while ((getchar()) != '\n');
         }
         else
