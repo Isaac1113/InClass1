@@ -42,12 +42,12 @@ int main() {
             time_t t;
             srand((unsigned) time(&t));
             int num = (rand() % max) + 1;
-            char guess = "";
+            char guess[10];
             
             do
             {
                 printf("Guess the number.");
-                scanf("%d", &guess);
+                gets(guess);
 
                 if (atoi(guess) == num)
                     printf("You guessed correct. You win!\n");
