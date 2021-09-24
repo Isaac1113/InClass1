@@ -30,7 +30,7 @@
 int main() {
 
     int max = 10;
-    char selection = "";
+    char selection;
 
     printf("Press 1 to play a game\n");
     printf("Press 2 to change the max number\n");
@@ -55,7 +55,7 @@ int main() {
                     printf("Your guess was too high.\n");
                 else
                     printf("Your guess was too low.\n");
-            } while ((guess != 'q') || (atoi(guess) != num));
+            } while ((guess[0] != 'q') && (atoi(guess) != num));
         }
         else if (selection == '2') {
             printf("Enter a new max value: ");
