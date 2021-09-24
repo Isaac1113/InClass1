@@ -25,4 +25,5 @@ int main(int argc, char *argv[]) {
     double cost = arr[rand() % 4];
 
     printf("Meal cost: %f\n", cost);
+    printf("Tax amount: %f\n", cost * (atof(argv[1]) / 100));
 }
