@@ -34,7 +34,7 @@ int main() {
 
     printf("Press 1 to play a game\n");
     printf("Press 2 to change the max number\n");
-    printf("Press 3 to quit");
+    printf("Press 3 to quit\n");
     selection = getchar();
     while ((getchar()) != '\n');
     
@@ -47,11 +47,11 @@ int main() {
             
             do
             {
-                printf("Guess the number.");
+                printf("Guess the number from 1 to %d: ", max);
                 gets(guess);
 
                 if (atoi(guess) == num)
-                    printf("You guessed correct. You win!\n");
+                    printf("You guessed correct. You win!\n\n");
                 else if (atoi(guess) > num)
                     printf("Your guess was too high.\n");
                 else
@@ -72,7 +72,7 @@ int main() {
         
         printf("Press 1 to play a game\n");
         printf("Press 2 to change the max number\n");
-        printf("Press 3 to quit");
+        printf("Press 3 to quit\n");
         selection = getchar();
         while ((getchar()) != '\n');
     }
