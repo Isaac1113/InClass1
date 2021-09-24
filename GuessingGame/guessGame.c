@@ -21,3 +21,6 @@
     Display Thank you message and end program
 */
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
