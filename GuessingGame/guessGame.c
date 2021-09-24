@@ -8,7 +8,7 @@
         Check if user enters 1:
             Create an int variable and assign it a random number from 1 to max value
             Prompt the user to enter a number and guess
-            Create while loop that loops until they enter 'q'
+            Create do while loop that loops until they enter 'q' or guess right
                 Check if input is correct variable and display if they guessed right
                 Else check if input is too high and display
                 Else display too low
@@ -29,7 +29,7 @@
 
 int main() {
 
-    int max = 0;
+    int max = 10;
     char selection = "";
 
     printf("Press 1 to play a game\n");
@@ -39,7 +39,23 @@ int main() {
     selection = getchar();
     while (selection != '3') {
         if (selection == '1') {
+            time_t t;
+            srand((unsigned) time(&t));
+            int num = (rand() % max) + 1;
+            char guess = "";
             
+            do
+            {
+                printf("Guess the number.");
+                scanf("%d", &guess);
+
+                if (atoi(guess) == num)
+                    printf("You guessed correct. You win!\n");
+                else if (atoi(guess) > num)
+                    printf("Your guess was too high.\n");
+                else
+                    printf("Your guess was too low.\n");
+            } while ((guess != 'q') || (atoi(guess) != num));
         }
     }
 
