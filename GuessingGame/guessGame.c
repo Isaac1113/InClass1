@@ -74,4 +74,6 @@ int main() {
         selection = getchar();
     }
 
+    printf("Thank you for playing the game.\n");
+    return 0;
 }
