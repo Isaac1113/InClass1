@@ -26,4 +26,5 @@ int main(int argc, char *argv[]) {
 
     printf("Meal cost: %f\n", cost);
     printf("Tax amount: %f\n", cost * (atof(argv[1]) / 100));
+    printf("Tip amount: %f\n", cost * (atof(argv[2]) / 100));
 }
