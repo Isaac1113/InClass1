@@ -36,6 +36,7 @@ int main() {
     printf("Press 2 to change the max number\n");
     printf("Press 3 to quit");
     selection = getchar();
+    while ((getchar()) != '\n');
     
     while (selection != '3') {
         if (selection == '1') {
@@ -64,6 +65,7 @@ int main() {
 
             if (newMax > 0 && newMax < INT_MAX)
                 max = newMax;
+            while ((getchar()) != '\n');
         }
         else
             printf("Not a valid selection.\n");
@@ -72,6 +74,7 @@ int main() {
         printf("Press 2 to change the max number\n");
         printf("Press 3 to quit");
         selection = getchar();
+        while ((getchar()) != '\n');
     }
 
     printf("Thank you for playing the game.\n");
